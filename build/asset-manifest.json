@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/animal-movement-visualize/static/css/main.28c4d1b6.css",
+    "main.js": "/animal-movement-visualize/static/js/main.8cfd74c5.js",
+    "static/js/453.8ab44547.chunk.js": "/animal-movement-visualize/static/js/453.8ab44547.chunk.js",
+    "index.html": "/animal-movement-visualize/index.html",
+    "main.28c4d1b6.css.map": "/animal-movement-visualize/static/css/main.28c4d1b6.css.map",
+    "main.8cfd74c5.js.map": "/animal-movement-visualize/static/js/main.8cfd74c5.js.map",
+    "453.8ab44547.chunk.js.map": "/animal-movement-visualize/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28c4d1b6.css",
+    "static/js/main.8cfd74c5.js"
+  ]
+}
