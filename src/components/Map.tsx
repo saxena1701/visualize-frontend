@@ -52,7 +52,7 @@ const Map = () => {
         if(isAuthenticated===true){
             const fetchData = async()=>{
                 try{
-                    let response = await axios.get('https://animal-movement-backend.onrender.com/api/movement_records',{headers: {
+                    let response = await axios.get('https://animal-movement-backend-1.onrender.com/api/movement_records',{headers: {
                     Authorization: `Bearer ${auth_token}`
                   }})
                     console.log(response.data)

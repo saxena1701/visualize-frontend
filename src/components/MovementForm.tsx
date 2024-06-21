@@ -65,7 +65,7 @@ const handleFormSubmit = (e:React.FormEvent) =>{
 
     const submitData = async () =>{
         try{
-            let response = await axios.post('https://animal-movement-backend.onrender.com/api/movement_records',formData,{headers: {
+            let response = await axios.post('https://animal-movement-backend-1.onrender.com/api/movement_records',formData,{headers: {
               Authorization: `Bearer ${auth_token}`
             }})
             navigate('/movements')

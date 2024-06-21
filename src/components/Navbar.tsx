@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async()=>{
     if(isAuthenticated){
-      let response = await axios.get("https://animal-movement-backend.onrender.com/auth/logout",{headers: {
+      let response = await axios.get("https://animal-movement-backend-1.onrender.com/auth/logout",{headers: {
       Authorization: `Bearer ${auth_token}`
     }})
 

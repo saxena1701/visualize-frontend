@@ -25,7 +25,7 @@ export const registerUserAsync = createAsyncThunk(
     'registerUserAsync',
     async (formData:FormData,thunkAPI)=>{
         try{
-            let response = await axios.post('https://animal-movement-backend.onrender.com/auth/register',formData);
+            let response = await axios.post('https://animal-movement-backend-1.onrender.com/auth/register',formData);
             return response;
         }catch(e){
             throw e;

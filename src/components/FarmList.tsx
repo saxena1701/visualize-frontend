@@ -29,7 +29,7 @@ const FarmList = () => {
         }else{
             const fetchFarms = async()=>{
                 try{
-                    let response = await axios.get('https://animal-movement-backend.onrender.com/api/population_records',{headers: {
+                    let response = await axios.get('https://animal-movement-backend-1.onrender.com/api/population_records',{headers: {
                     Authorization: `Bearer ${auth_token}`
                   }})
                     setFarmList(response.data)

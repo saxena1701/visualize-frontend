@@ -26,7 +26,7 @@ const FarmForm = () => {
 
         const submitData = async () =>{
             try{
-                let response = await axios.post('https://animal-movement-backend.onrender.com/api/population_records',formData,{headers: {
+                let response = await axios.post('https://animal-movement-backend-1.onrender.com/api/population_records',formData,{headers: {
                     Authorization: `Bearer ${auth_token}`
                   }})
                 console.log(response)

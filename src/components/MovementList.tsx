@@ -44,7 +44,7 @@ const MovementList = () => {
             navigate('/')
         }else{
             const fetchMovementData = async()=>{
-                let response = await axios.get('https://animal-movement-backend.onrender.com/api/movement_records',{headers: {
+                let response = await axios.get('https://animal-movement-backend-1.onrender.com/api/movement_records',{headers: {
                     Authorization: `Bearer ${auth_token}`
                   }})
                 setMovementList(response.data)
