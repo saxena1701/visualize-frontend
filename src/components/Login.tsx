@@ -18,6 +18,7 @@ const Login = () => {
         password:""
     })
     const {isAuthenticated,error} = useSelector((state:RootState)=>state.login)
+    const [loading,setLoading] = useState(false)
     const [alert,setAlert] = useState<Alert>({
         alert:""
     })
@@ -31,6 +32,7 @@ const Login = () => {
                 navigate('/map')
             }else{
                 console.log(error)
+                setLoading(false)
                 setAlert({
                     alert:"Login Failed"
                 })
@@ -45,6 +47,15 @@ const Login = () => {
         
        
         
+    }
+
+    const handleAlert = () =>{
+        setAlert(
+            {
+                alert:""
+            }
+        )
+        setLoading(true)
     }
 
     const handleChange = (e : React.ChangeEvent<HTMLInputElement>) =>{
@@ -72,9 +83,10 @@ const Login = () => {
             <form onSubmit={handleFormSubmit} className="manual__login--form">
                 <input type="email" placeholder="Email" name="email" id="email" onChange={handleChange}></input>
                 <input type="password" placeholder="Password" name="password" onChange={handleChange} id="password"></input>
-                <button className="btn btn--manual">Log In</button>
+                <button className="btn btn--manual" onClick={handleAlert}>Log In</button>
             </form>
         </div><br></br>
+        {loading===true?<div>Logging in...</div>:<></>}
         {alert.alert!==""?<div>Invalid Credentials</div>:<></>}
 
 	<hr className="seperate__line"></hr>

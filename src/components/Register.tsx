@@ -21,6 +21,7 @@ const Register = () => {
         password:""
     })
     const {error} = useSelector((state:RootState)=>state.register)
+    const [loading,setLoading] = useState(false)
     const [alert,setAlert] = useState<Alert>({
         alert:""
     })
@@ -34,6 +35,7 @@ const Register = () => {
                 navigate('/')
             }else{
                 console.log(error)
+                setLoading(false)
                 setAlert({
                     alert:"Registration failed"
                 })
@@ -45,6 +47,15 @@ const Register = () => {
                
             }
         })
+    }
+
+    const handleAlert = () =>{
+        setAlert(
+            {
+                alert:""
+            }
+        )
+        setLoading(true)
     }
 
     
@@ -69,9 +80,10 @@ const Register = () => {
                 <input type="text" placeholder="Email" id="email" name='email' value={formData.email} onChange={handleChange}></input>
 
                 <input type="password" placeholder="Password" id="password" name='password' value={formData.password} onChange={handleChange}></input>
-                <button className="btn btn--manual">Sign Up</button>
+                <button className="btn btn--manual" onClick={handleAlert}>Sign Up</button>
             </form>
         </div><br></br>
+        {loading===true?<div>Registering...</div>:<></>}
         {alert.alert!==""?<div>{alert.alert}</div>:<></>}
 
 	<hr className="seperate__line"></hr>    

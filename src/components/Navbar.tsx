@@ -35,7 +35,7 @@ const Navbar = () => {
             <Link to='/movements'><b>Movement Record</b></Link>
         </div>
         {isAuthenticated?<div className="navbar-content" onClick={handleLogout}>
-            <a>Logout</a>
+            <a href='#'>Logout</a>
         </div>:<></>}
     </div>
   )
